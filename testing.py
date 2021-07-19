@@ -1,6 +1,11 @@
 import numpy as np
 import pandas as pd
+data_name = 'inequality'
 
+x_tr= np.load('data/'+data_name+'/x_tr.npy', fix_imports=True)
+y_tr=np.load('data/'+data_name+'/y_tr.npy', fix_imports=True)
+x_val=np.load('data/'+data_name+'/x_val.npy', fix_imports=True)
+y_val=np.load('data/'+data_name+'/y_val.npy', fix_imports=True)
 
 t = np.load('x_test.npy')
 print('t')
