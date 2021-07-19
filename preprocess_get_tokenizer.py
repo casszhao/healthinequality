@@ -339,19 +339,6 @@ for i in range(len(y_val)):
         ind.append(i)
 
 y_val=np.delete(y_val,ind, axis=0)
-
-# print('----------------------------')
-# print('')
-# print('----------------------------')
-# print('before save print')
-# print(y_val)
-#
-# np.save(out_data_path +'y_val.npy', y_val, allow_pickle=True)
-# y_val=np.load(out_data_path +'y_val.npy', fix_imports=True)
-# print('')
-# print('after save print')
-# print(y_val)
-
 x_val=np.delete(x_val,ind, axis=0)
 
 ind=[]
@@ -368,10 +355,27 @@ x_test=np.delete(x_test,ind, axis=0)
 
 
 print("after deleting len(x_tr) len(x_val) len(x_test)",len(x_tr) ,len(x_val) ,len(x_test))
+
+
+print('----------------------------')
+print('')
+print('----------------------------')
+print('before save print')
+print(y_tr)
+
+
+
 # save data
 np.save(out_data_path +'y_tr.npy', y_tr, allow_pickle=True)
-print('npy path, y_tr example: ', out_data_path +'y_tr.npy')# .npy extension is added if not given
+y_tr=np.load(out_data_path +'y_tr.npy', fix_imports=True)
+print('')
+print('after save print, y_tr:')
+print(y_tr)
 np.save(out_data_path + 'x_tr.npy', x_tr, allow_pickle=True)
+x_tr=np.load(out_data_path +'x_tr.npy', fix_imports=True)
+print('')
+print('after save print, x_tr:')
+print(x_tr)
 
 np.save(out_data_path +'y_val.npy', y_val, allow_pickle=True)
 np.save(out_data_path +'x_val.npy', x_val, allow_pickle=True)
