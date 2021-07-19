@@ -47,8 +47,7 @@ def rare_words_analysis(tokenizer, thresh):
 
 # wiki_title_topn_doc is the wiki data we extracted and saved in the format (title, topn words using tfidf, the first n words)
 # in_data_path='/Users/areej/Desktop/wiki_extract/wiki_title_topn_doc/'
-in_topics_path = './data/inequality/abstract_topTFIDF_title_HealthEquity.csv' # we are using this to filter out any wiki titles that exactly match labels from the topics
-
+in_topics_path = './data/inequality/abstract_topTFIDF_title_HealthEquity.csv'
 
 # now processing for wiki_sent, if you want to prep for wiki_tfidf then its 'data/wiki_tfidf/'
 out_data_path='./data/inequality/'
@@ -56,11 +55,12 @@ out_data_path='./data/inequality/'
 
 data=pd.read_csv(in_topics_path, header=0, usecols=[1,2,3])
 print(data.head())
-data.columns = ['sents', 'topns', 'titles']
+data.columns = ['sents', 'topns', 'titles'] # sents, topns-->tf idf, titles(term/label)-->paper title
 print(data.head())
 
-
-topics_labels= list(data['topns'])
+# we are using this to filter out
+# any wiki titles that exactly match labels from the topics
+topics_labels= list(data['titles'])
 
 # data = pd.DataFrame(
 #     {
@@ -369,7 +369,8 @@ x_test=np.delete(x_test,ind, axis=0)
 
 print("after deleting len(x_tr) len(x_val) len(x_test)",len(x_tr) ,len(x_val) ,len(x_test))
 # save data
-np.save(out_data_path +'y_tr.npy', y_tr, allow_pickle=True)    # .npy extension is added if not given
+np.save(out_data_path +'y_tr.npy', y_tr, allow_pickle=True)
+print('npy path, y_tr example: ', out_data_path +'y_tr.npy')# .npy extension is added if not given
 np.save(out_data_path + 'x_tr.npy', x_tr, allow_pickle=True)
 
 np.save(out_data_path +'y_val.npy', y_val, allow_pickle=True)
