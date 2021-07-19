@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/data/inequality/abstract_topTFIDF_title.csv
+/data/inequality/HealthEquityTopicBib.tsv

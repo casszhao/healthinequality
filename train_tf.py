@@ -213,11 +213,11 @@ else:
 
 
 # load data after clean, tokenization, padding and splitting (procssing done in file preprocess.py)
-x_tr= np.load('data/'+data_name+'/x_tr.npy')
-y_tr=np.load('data/'+data_name+'/y_tr.npy')
+x_tr= np.load('data/'+data_name+'/x_tr.npy', fix_imports=True)
+y_tr=np.load('data/'+data_name+'/y_tr.npy', fix_imports=True)
 
-x_val=np.load('data/'+data_name+'/x_val.npy')
-y_val=np.load('data/'+data_name+'/y_val.npy')
+x_val=np.load('data/'+data_name+'/x_val.npy', fix_imports=True)
+y_val=np.load('data/'+data_name+'/y_val.npy', fix_imports=True)
 
 
 
