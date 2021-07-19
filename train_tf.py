@@ -186,7 +186,7 @@ BATCH_SIZE = args.batch_size
 ################
 print(data_name)
 
-if data_name == 'wiki_tfidf' or data_name == 'wiki_sent' or data_name == 'bhatia_topics_tfidf' or data_name == 'TroInequality':
+if data_name == 'wiki_tfidf' or data_name == 'wiki_sent' or data_name == 'bhatia_topics_tfidf' or data_name == 'inequality':
     '''
     wiki data has 
             text with max length 30
