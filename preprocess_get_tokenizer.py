@@ -378,10 +378,26 @@ print('after save print, x_tr:')
 print(x_tr)
 
 np.save(out_data_path +'y_val.npy', y_val, allow_pickle=True)
+y_val=np.load(out_data_path +'y_val.npy', fix_imports=True)
+print('')
+print('after save print, y_val:')
+print(y_val)
 np.save(out_data_path +'x_val.npy', x_val, allow_pickle=True)
+x_val=np.load(out_data_path +'x_val.npy', fix_imports=True)
+print('')
+print('after save print, x_val:')
+print(x_val)
 
 np.save(out_data_path +'y_test.npy', y_test, allow_pickle=True)
+y_test=np.load(out_data_path +'y_test.npy', fix_imports=True)
+print('')
+print('after save print, y_test:')
+print(y_test)
 np.save(out_data_path +'x_test.npy', x_test, allow_pickle=True)
+x_test=np.load(out_data_path +'x_test.npy', fix_imports=True)
+print('')
+print('after save print, x_test:')
+print(x_test)
 
 
 #save tokemizer

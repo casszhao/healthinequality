@@ -2,7 +2,16 @@ import numpy as np
 import pandas as pd
 data_name = 'inequality'
 
-x_tr= np.load('data/'+data_name+'/x_tr.npy', fix_imports=True)
+x_tr= np.load('data/'+data_name+'/y_val.npy', fix_imports=True)
+#x_tr[1] np.ndarray
+print(len(x_tr))
+print(x_tr)
+print(len(x_tr[2]))
+print(len(x_tr[1]))
+print(len(x_tr[3]))
+print(len(x_tr[4]))
+
+stop
 y_tr=np.load('data/'+data_name+'/y_tr.npy', fix_imports=True)
 x_val=np.load('data/'+data_name+'/x_val.npy', fix_imports=True)
 y_val=np.load('data/'+data_name+'/y_val.npy', fix_imports=True)
